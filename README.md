@@ -1,7 +1,7 @@
 # Análise e Limpeza de Dados Aplicado a Telecomunicações
  
 ## Definição do Problema
-Uma empresa de telecomunicações possui registros históricos em um volume de dados  de mais de 150 mil registros. Os dados serão usados para modelagem preditiva, mas antes  precisamos realizar um trabalho de limpeza pois os dados possuem diversos problemas.
+Uma empresa de telecomunicações possui registros históricos em um volume de dados de mais de 150 mil registros. Os dados serão usados para modelagem preditiva, mas antes  precisamos realizar um trabalho de limpeza pois os dados possuem diversos problemas.
 
 ## Objetivo da Análise
 Daremos ênfase ao tratamento de valores ausentes, tratamento de outliers e ajuste dos tipos de dados. Ao final vamos gerar um novo arquivo csv com os dados limpos
