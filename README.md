@@ -7,7 +7,7 @@ Uma empresa de telecomunicações possui registros históricos em um volume de d
 Daremos ênfase ao tratamento de valores ausentes, tratamento de outliers e ajuste dos tipos de dados. Ao final vamos gerar um novo arquivo csv com os dados limpos
 
 ## Dataset
-O [conjunto de dados]() contém informações relacionadas a 
+O [conjunto de dados](https://github.com/sgribeiro/telco-clean/tree/main/dataset) contém informações relacionadas a 
 
 ### Dicionário de Dados
 
