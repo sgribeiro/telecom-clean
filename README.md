@@ -7,9 +7,9 @@ Uma empresa de telecomunicações possui registros históricos em um volume de d
 Daremos ênfase ao tratamento de valores ausentes, tratamento de outliers e ajuste dos tipos de dados. Ao final vamos gerar um novo arquivo csv com os dados limpos
 
 ## Dataset
-O [conjunto de dados](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) contém informações relacionadas a 
+O [conjunto de dados]() contém informações relacionadas a 
 
 ### Dicionário de Dados
 
 ## Informações Adicionais
-O referido projeto foi inspirado pelo terceiro curso, Prepare Data for Exploration, que compõe a certificação profissional em Data Analitycs do Google e baseado no curso de Análise de Dados com Linguagem Python que compôe a Formação Analista de Dados da Data Science Academy.
+O referido projeto foi baseado no curso de Análise de Dados com Linguagem Python que compôe a Formação Analista de Dados da Data Science Academy.
