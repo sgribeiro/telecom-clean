@@ -1,4 +1,4 @@
-# Análise e Limpeza de Dados Aplicado a Telecomunicações
+# Análise e Limpeza de Dados de Telecomunicações com Python
  
 ## Definição do Problema
 Uma empresa de telecomunicações possui registros históricos em um volume de dados de mais de 150 mil registros. Os dados serão usados para modelagem preditiva, mas antes  precisamos realizar um trabalho de limpeza pois os dados possuem diversos problemas.
