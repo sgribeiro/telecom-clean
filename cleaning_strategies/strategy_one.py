@@ -4,27 +4,34 @@
 import numpy as np
 import pandas as pd
 
-# Calcula o percentual de valores ausentes
 def percent_missing(DataFrame):
     """
-    Calculates the percentage of missing values in a pandas DataFrame.
+    Returns a string with the percentage of missing values in the input DataFrame.
 
-    Parameters:
-    DataFrame: pandas DataFrame - The DataFrame to be analyzed.
+    Args:
+        DataFrame (pandas.DataFrame): Input DataFrame to be analyzed.
 
     Returns:
-    string - A string containing the percentage of missing values in the DataFrame.
-
-    Example:
-    df = pd.DataFrame({'A': [1, 2, np.nan], 'B': [3, np.nan, np.nan], 'C': [4, 5, 6]})
-    percent_missing(df)
-    '33.33%'
+        str: String containing the percentage of missing values in the input DataFrame, rounded to two decimal places,
+        followed by the "%" symbol.
     """
     percent_missing = DataFrame.isnull().mean().mean() * 100
     return f"{round(percent_missing, 2)}%"
 
-# Calcula o percentual de valores ausentes por coluna
 def columns_percent_missing(DataFrame):
-    return pd.DataFrame({'Dataset Columns':DataFrame.isnull().sum(), 
-                         'Dictionary Columns':DataFrame.isnull().mean(),
-                         'Type': DataFrame.dtypes})
+    """
+    Returns a DataFrame with the columns of the input DataFrame, showing the amount and percentage of missing values
+    in each column, as well as the data type of each column.
+
+    Args:
+        DataFrame (pandas.DataFrame): Input DataFrame to be analyzed.
+
+    Returns:
+        DataFrame (pandas.DataFrame): DataFrame with the columns of the input DataFrame, showing the amount and percentage of missing 
+        values in each column, as well as the data type of each column.
+    """
+    columns_missing = pd.DataFrame({'Missing Values': DataFrame.isnull().sum(), 
+                                    'Missing Values (%)': DataFrame.isnull().mean() * 100,
+                                    'DType': DataFrame.dtypes})
+
+    return columns_missing.sort_values('Missing Values (%)', ascending=False).round(2)
