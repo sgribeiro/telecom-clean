@@ -1,34 +1,34 @@
 # Estratégia 01: limpeza e tratamento de valores ausentes
 
-# Imports
+# Importações
 import numpy as np
 import pandas as pd
 
 def percent_missing(DataFrame):
     """
-    Returns a string with the percentage of missing values in the input DataFrame.
+    Retorna uma string com a porcentagem de valores ausentes no DataFrame de entrada.
 
     Args:
-        DataFrame (pandas.DataFrame): Input DataFrame to be analyzed.
+        DataFrame (pandas.DataFrame): DataFrame de entrada a ser analisado.
 
     Returns:
-        str: String containing the percentage of missing values in the input DataFrame, rounded to two decimal places,
-        followed by the "%" symbol.
+        str: String contendo a porcentagem de valores faltantes no DataFrame de entrada, arredondada para duas casas decimais,
+        seguida pelo símbolo "%".
     """
     percent_missing = DataFrame.isnull().mean().mean() * 100
     return f"{round(percent_missing, 2)}%"
 
 def columns_percent_missing(DataFrame):
     """
-    Returns a DataFrame with the columns of the input DataFrame, showing the amount and percentage of missing values
-    in each column, as well as the data type of each column.
+    Retorna um DataFrame com as colunas do DataFrame de entrada, mostrando a quantidade e porcentagem de valores faltantes
+    em cada coluna, bem como o tipo de dados de cada coluna.
 
     Args:
-        DataFrame (pandas.DataFrame): Input DataFrame to be analyzed.
+        DataFrame (pandas.DataFrame): DataFrame de entrada a ser analisado.
 
     Returns:
-        DataFrame (pandas.DataFrame): DataFrame with the columns of the input DataFrame, showing the amount and percentage of missing 
-        values in each column, as well as the data type of each column.
+        DataFrame (pandas.DataFrame): DataFrame com as colunas do DataFrame de entrada, mostrando a quantidade e porcentagem de valores faltantes 
+        em cada coluna, bem como o tipo de dados de cada coluna. 
     """
     columns_missing = pd.DataFrame({'Missing Values': DataFrame.isnull().sum(), 
                                     'Missing Values (%)': DataFrame.isnull().mean() * 100,
